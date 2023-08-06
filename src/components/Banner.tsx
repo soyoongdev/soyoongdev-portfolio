@@ -14,7 +14,7 @@ interface BannerProps extends React.HTMLAttributes<HTMLDivElement> {
 function Banner({ data, className }: BannerProps) {
   return (
     <div
-      className={cn('mt-2 h-[80vh] rounded-lg bg-base md:h-[60vh]', className)}
+      className={cn('bg-base mt-2 h-[80vh] rounded-lg md:h-[60vh]', className)}
     >
       <div className='flex h-full w-full flex-col-reverse items-center justify-center p-content md:flex-row'>
         <div className='flex h-1/2 w-full flex-col justify-between md:h-full md:w-1/2'>

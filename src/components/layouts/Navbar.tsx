@@ -79,23 +79,23 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(({ className }, ref) => {
         {/* Header Item full */}
         <div
           className={cn(
-            'min-h-[var(--navbar-height)] w-full flex-col-reverse items-center gap-5 py-2 md:flex md:flex-row',
+            'min-h-[var(--navbar-height)] w-full flex-col-reverse  items-center gap-5 py-2 md:flex md:w-fit md:flex-row',
             {
               hidden: menuToggle,
               flex: !menuToggle,
             }
           )}
         >
-          <div className='w-full flex-1 flex-shrink-0 md:w-auto'>
+          <div className='w-full flex-shrink-0 lg:w-fit'>
             <ul className='flex w-full list-none flex-col items-start justify-center gap-1 md:w-fit md:flex-row'>
               {navRoutes.map((page, index) => {
                 return (
                   <li
                     key={index}
-                    className='inline-flex h-9 w-full cursor-pointer items-center whitespace-nowrap hover:bg-secondary md:w-auto'
+                    className='inline-flex h-9 w-full cursor-pointer items-center justify-center whitespace-nowrap hover:bg-secondary lg:w-fit'
                   >
                     <Link
-                      className='flex-1 p-2 text-base font-medium text-secondary-foreground'
+                      className='w-full p-2 text-center text-base font-medium text-secondary-foreground hover:bg-secondary'
                       href={page.path}
                     >
                       {page.name}
