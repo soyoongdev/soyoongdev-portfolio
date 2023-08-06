@@ -11,7 +11,6 @@ module.exports = {
     extend: {
       colors: {
         background: 'var(--background)',
-        base: 'var(--base)',
         foreground: 'var(--foreground)',
         border: 'var(--border)',
         input: 'var(--input)',

@@ -3,8 +3,7 @@
     "next",
     "next/core-web-vitals",
     "eslint:recommended",
-    "plugin:prettier/recommended",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "plugins": ["prettier"],
   "rules": {

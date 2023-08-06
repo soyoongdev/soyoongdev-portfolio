@@ -1,12 +1,9 @@
 'use client'
 
 import { Menu } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import React, { forwardRef, useEffect, useRef, useState } from 'react'
-import { User } from '~/components'
 import { Button } from '~/components/ui/button'
-import SearchBar from '~/components/layouts/search/SearchBar'
 import { cn } from '~/lib/utils'
 import { navRoutes } from '~/lib/routes'
 
@@ -49,29 +46,27 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(({ className }, ref) => {
         className
       )}
     >
-      <div className='flex flex-row flex-wrap items-center px-content md:flex-nowrap'>
+      <div className='flex flex-row flex-wrap items-center justify-between px-content md:flex-nowrap'>
         {/* Logo */}
         <div className='relative mr-4 hidden md:block'>
           <Link
             href='/'
-            className='flex flex-row items-center text-xl font-bold text-primary'
+            className='flex flex-row items-center text-xl font-bold text-foreground'
           >
-            <Image
-              src='/v5t.png'
-              alt='logo'
-              width={55}
-              height={55}
-              className='h-auto w-auto object-contain'
-              sizes='55px'
-            />
-            <span className='block transition-all duration-300 ease-in-out max-lg:hidden lg:block'>
-              V5T
-            </span>
+            SoyoongDev
           </Link>
         </div>
         {/* Menu button */}
-        <div className='flex h-fit w-full items-center justify-between py-2 md:hidden'>
-          <div className='md:hidden'>
+        <div className='flex h-fit min-h-[var(--navbar-height)] w-full items-center justify-between py-2 md:hidden'>
+          <div className='absolute left-1/2 flex -translate-x-1/2'>
+            <Link
+              href='/'
+              className='flex flex-row items-center text-xl font-bold text-foreground'
+            >
+              SoyoongDev
+            </Link>
+          </div>
+          <div className='absolute right-0'>
             <Button
               variant='text'
               className='h-fit'
@@ -80,24 +75,6 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(({ className }, ref) => {
               <Menu />
             </Button>
           </div>
-          <div className='absolute left-1/2 flex -translate-x-1/2'>
-            <Link
-              href='/'
-              className='flex flex-row items-center text-xl font-bold text-primary'
-            >
-              <Image
-                src='/v5t.png'
-                alt='logo'
-                width={55}
-                height={55}
-                className='h-auto w-auto object-contain'
-                sizes='55px'
-              />
-              <span className=''>V5T</span>
-            </Link>
-          </div>
-          {/* User login */}
-          <User className='flex md:hidden' />
         </div>
         {/* Header Item full */}
         <div
@@ -115,10 +92,10 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(({ className }, ref) => {
                 return (
                   <li
                     key={index}
-                    className='inline-flex h-9 w-full items-center whitespace-nowrap md:w-auto'
+                    className='inline-flex h-9 w-full cursor-pointer items-center whitespace-nowrap hover:bg-secondary md:w-auto'
                   >
                     <Link
-                      className='flex-1 p-2 text-sm font-medium text-secondary-foreground hover:text-primary'
+                      className='flex-1 p-2 text-base font-medium text-secondary-foreground'
                       href={page.path}
                     >
                       {page.name}
@@ -128,10 +105,6 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(({ className }, ref) => {
               })}
             </ul>
           </div>
-          <div className='w-auto max-w-xs flex-1'>
-            <SearchBar className='max-md:w-48' />
-          </div>
-          <User className='hidden md:flex' />
         </div>
       </div>
     </header>
