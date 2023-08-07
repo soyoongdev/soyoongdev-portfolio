@@ -31,7 +31,7 @@ export default async function HomePage() {
             Tech stack
           </h1>
         </div>
-        <ul className='flex w-full flex-row flex-wrap justify-center gap-10'>
+        <ul className='flex w-full flex-row flex-wrap justify-center gap-5'>
           {techData.map((item, index) => {
             return (
               <li key={item.id || index}>
