@@ -6,7 +6,7 @@
   :root {
     --background: #f9f9f9;
     --foreground: #0f172a;
-
+    
     --muted: #f1f5f9;
     --muted-foreground: #64748b;
 
@@ -19,7 +19,7 @@
     --border: #e2e8f0;
     --input: #e2e8f0;
 
-    --primary: #f9995d;
+    --primary: #0f172a;
     --primary-foreground: #f8fafc;
 
     --secondary: #f1f5f9;
@@ -80,17 +80,14 @@
   html,
   body {
     @apply bg-background text-foreground;
-    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
     min-height: 100%;
     max-width: 100vw;
   }
 }
 
 @layer components {
-  .page-title {
-    @apply text-5xl font-bold;
-  }
-  .footer-info-label {
-    @apply text-base text-white;
+  .social-icons {
+    @apply h-[24px] w-[24px] text-foreground
   }
 }

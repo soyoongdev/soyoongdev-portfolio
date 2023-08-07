@@ -30,7 +30,7 @@ interface WrapperTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {}
 const WrapperTitle = forwardRef<HTMLHeadingElement, WrapperTitleProps>(
   ({ children, className }, ref) => {
     return (
-      <h1 ref={ref} className={cn('page-title mt-10', className)}>
+      <h1 ref={ref} className={cn('mt-10 text-5xl font-bold', className)}>
         {children}
       </h1>
     )

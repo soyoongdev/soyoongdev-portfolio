@@ -9,7 +9,7 @@ import Dialog, {
 import { cn } from '~/lib/utils'
 import { Input } from '~/components/ui/input'
 import { productList } from '~/example.data'
-import FilterList from './filter/FilterList'
+import FilterList from './filter/filter-list'
 import { InProduct } from '~/lib/interfaces'
 import { Button } from '~/components/ui/button'
 

@@ -101,7 +101,7 @@ function Footer() {
                   className='flex flex-1 flex-col items-start justify-center gap-5'
                   key={section.id || i}
                 >
-                  <h2 className='font-bold uppercase text-base text-secondary'>
+                  <h2 className='text-base font-bold uppercase text-secondary'>
                     {section.title_section}
                   </h2>
                   <ul className='flex list-none flex-col items-start gap-y-2'>
