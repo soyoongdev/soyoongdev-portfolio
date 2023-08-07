@@ -1,7 +1,2 @@
-export { default as CardService } from './ServiceCard'
-export { default as CategoryCard } from './CategoryCard'
-export { default as PartnerCard } from './PartnerCard'
-export { default as ProductCard } from './ProductCard'
 export { default as RowContent } from './ui/row-content'
 export { default as RowTitle } from './ui/row-title'
-export { default as User } from './User'

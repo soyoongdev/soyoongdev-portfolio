@@ -27,7 +27,7 @@ const SidebarTitle = forwardRef<HTMLHeadingElement, SidebarTitleProps>(
     return (
       <h1
         ref={ref}
-        className={cn('font-medium text-base text-white', className)}
+        className={cn('text-base font-medium text-white', className)}
       >
         {children}
       </h1>
