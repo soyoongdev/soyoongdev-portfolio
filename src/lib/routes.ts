@@ -1,23 +1,23 @@
 export const navRoutes = [
   {
-    name: 'Giới thiệu',
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'Technical',
+    path: '/technical',
+  },
+  {
+    name: 'Projects',
+    path: '/Projects',
+  },
+  {
+    name: 'About me',
     path: '/about',
   },
   {
-    name: 'Sản phẩm',
-    path: '/products',
-  },
-  {
-    name: 'Tài liệu',
-    path: '/documentation',
-  },
-  {
-    name: 'Tin tức & Sự kiện',
-    path: '/newsevent',
-  },
-  {
-    name: 'Tuyển dụng',
-    path: '/career',
+    name: 'Contact',
+    path: '/contact',
   },
 ]
 

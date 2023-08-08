@@ -95,7 +95,7 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(({ className }, ref) => {
                     className='inline-flex h-9 w-full cursor-pointer items-center justify-center whitespace-nowrap lg:w-fit'
                   >
                     <Link
-                      className='w-full p-2 text-center text-base font-medium text-secondary-foreground hover:bg-secondary hover:font-bold'
+                      className='w-full p-2 text-center text-base font-medium text-secondary-foreground hover:bg-secondary'
                       href={page.path}
                     >
                       {page.name}
