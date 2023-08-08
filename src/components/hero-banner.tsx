@@ -15,13 +15,13 @@ const poppins = Poppins({
 
 function HeroBanner() {
   return (
-    <div className={cn('bg-base mt-2 h-full rounded-lg')}>
-      <div className='flex h-full w-full flex-col-reverse items-center justify-center gap-10 p-content md:flex-row'>
-        <div className='flex h-fit w-[500px] flex-col justify-between md:h-full'>
+    <div className={cn('mt-2 h-full')}>
+      <div className='flex h-full w-full flex-col-reverse items-center justify-center gap-10 md:flex-row md:px-content'>
+        <div className='flex h-fit w-full flex-col justify-center md:h-full md:w-[500px]'>
           <div className='flex flex-col gap-5'>
             <h1
               className={cn(
-                'line-clamp-3 text-center text-[55px] font-bold leading-tight md:text-left',
+                'line-clamp-3 text-center text-[2.5rem] font-bold leading-tight md:text-left md:text-7xl',
                 poppins.className
               )}
             >
@@ -47,14 +47,17 @@ function HeroBanner() {
             </Link>
           </div>
         </div>
-        <div className='relative flex h-[350px] w-[350px] items-center'>
-          <Image
-            src={'/soyoong.jpg'}
-            fill
-            sizes='100%'
-            alt='product-image'
-            className='h-auto w-auto rounded-full object-cover'
-          />
+        <div className='flex h-[350px] w-[350px] items-center justify-center'>
+          <div className='relative h-5/6 w-5/6 md:h-full md:w-full'>
+            <Image
+              src={'/soyoong.jpg'}
+              fill
+              priority
+              sizes='100%'
+              alt='product-image'
+              className='h-auto w-auto rounded-full object-cover'
+            />
+          </div>
         </div>
       </div>
     </div>
