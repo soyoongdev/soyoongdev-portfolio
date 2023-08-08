@@ -15,13 +15,13 @@ const poppins = Poppins({
 
 function HeroBanner() {
   return (
-    <div className={cn('mt-2 h-full')}>
-      <div className='flex h-full w-full flex-col-reverse items-center justify-center gap-10 md:flex-row md:px-content'>
+    <div className={cn('h-full md:my-6')}>
+      <div className='flex h-full w-full flex-col-reverse items-center justify-center gap-10 md:flex-row md:items-start md:px-content'>
         <div className='flex h-fit w-full flex-col justify-center md:h-full md:w-[500px]'>
           <div className='flex flex-col gap-5'>
             <h1
               className={cn(
-                'line-clamp-3 text-center text-[2.5rem] font-bold leading-tight md:text-left md:text-7xl',
+                'line-clamp-3 text-center text-[2.5rem] font-bold leading-tight sm:text-[3rem] md:text-left md:text-[4rem] lg:text-7xl',
                 poppins.className
               )}
             >

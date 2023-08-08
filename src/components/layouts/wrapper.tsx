@@ -16,7 +16,7 @@ interface WrapperHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 const WrapperHeader = forwardRef<HTMLDivElement, WrapperHeaderProps>(
   ({ children, className }, ref) => {
     return (
-      <div ref={ref} className={cn('my-6 px-content', className)}>
+      <div ref={ref} className={cn('my-2 px-content', className)}>
         {children}
       </div>
     )
