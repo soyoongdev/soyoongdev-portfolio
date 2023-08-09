@@ -15,9 +15,9 @@ const poppins = Poppins({
 
 function HeroBanner() {
   return (
-    <div className={cn('h-full md:my-6')}>
-      <div className='flex h-full w-full flex-col-reverse items-center justify-center gap-10 md:flex-row md:items-start md:px-content'>
-        <div className='flex h-fit w-full flex-col justify-center md:h-full md:w-[500px]'>
+    <div className={cn('h-full w-full md:my-6')}>
+      <div className='flex h-full w-full flex-col-reverse items-center justify-center gap-10 md:flex-row md:items-start'>
+        <div className='flex h-fit w-full flex-col justify-center md:h-full md:w-2/3'>
           <div className='flex flex-col gap-5'>
             <h1
               className={cn(
@@ -48,7 +48,7 @@ function HeroBanner() {
           </div>
         </div>
         <div className='flex h-[350px] w-[350px] items-center justify-center'>
-          <div className='relative h-5/6 w-5/6 md:h-full md:w-full'>
+          <div className='relative h-full w-full'>
             <Image
               src={'/soyoong.jpg'}
               fill

@@ -76,7 +76,7 @@ const techData: Tech[] = [
   {
     id: 12,
     title: 'MySQL',
-    imageURL: 'mysql-original.svg',
+    imageURL: '/icons/mysql-original.svg',
     url: 'https://www.mysql.com',
   },
   {

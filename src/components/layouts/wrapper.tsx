@@ -1,13 +1,9 @@
 'use client'
 
-import React, { forwardRef, useEffect, useState } from 'react'
-import { ChevronUp } from 'lucide-react'
-import { Footer, Navbar } from '~/components/layouts'
-import { Button } from '~/components/ui/button'
-import { cn } from '~/lib/utils'
 import '~/styles/globals.css'
+import React, { forwardRef } from 'react'
+import { cn } from '~/lib/utils'
 import { Toaster } from '~/components/ui/toaster'
-import Head from 'next/head'
 
 interface WrapperHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
@@ -16,7 +12,7 @@ interface WrapperHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 const WrapperHeader = forwardRef<HTMLDivElement, WrapperHeaderProps>(
   ({ children, className }, ref) => {
     return (
-      <div ref={ref} className={cn('my-2 px-content', className)}>
+      <div ref={ref} className={cn('my-2 mb-10', className)}>
         {children}
       </div>
     )
@@ -39,81 +35,26 @@ const WrapperTitle = forwardRef<HTMLHeadingElement, WrapperTitleProps>(
 
 WrapperTitle.displayName = 'WrapperTitle'
 
-interface WrapperProps extends React.HTMLAttributes<HTMLDivElement> {
-  title?: string
-  hasNavbar?: boolean | undefined
-  hasFooter?: boolean | undefined
-}
+interface WrapperProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const Wrapper = forwardRef<HTMLDivElement, WrapperProps>(
-  ({ title, hasNavbar, hasFooter, children, className }, ref) => {
-    const [isVisibleButtonScroll, setIsVisibleButtonScroll] = useState(false)
-
-    const handleScroll = () => {
-      const scrollYOffset = window.scrollY
-      // Visible state button scroll to top
-      setIsVisibleButtonScroll(scrollYOffset > 300)
-    }
-
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      })
-    }
-
-    useEffect(() => {
-      window.addEventListener('scroll', handleScroll)
-
-      return () => {
-        window.removeEventListener('scroll', handleScroll)
-      }
-    }, [])
-
+  ({ children, className }, ref) => {
     return (
       <>
-        <Head>
-          <title>{title ? title + ' - Amazona' : 'Amazona'}</title>
-          <meta name='description' content='Ecommerce Website' />
-          <link rel='icon' href='/favicon.ico' />
-        </Head>
         <div
           ref={ref}
           className={cn(
             'flex flex-col justify-between scroll-smooth bg-background'
           )}
         >
-          {hasNavbar && <Navbar />}
           <div
             className={cn(
-              'container min-h-screen',
-              {
-                'mt-[var(--navbar-height)]': hasNavbar,
-                'mb-[var(--navbar-height)]': hasFooter,
-              },
+              'md:px-30 container mb-[var(--navbar-height)] mt-[var(--navbar-height)] min-h-screen px-10 sm:px-20 lg:px-40',
               className
             )}
           >
             {children}
           </div>
-          {/* Start button */}
-          <div
-            className={cn(
-              'fixed bottom-0 right-0 z-[999] mb-10 mr-10 opacity-0 transition-opacity duration-300',
-              {
-                'opacity-100': isVisibleButtonScroll,
-              }
-            )}
-          >
-            <Button
-              className='h-12 w-12 bg-neutral-500 p-0'
-              onClick={scrollToTop}
-            >
-              <ChevronUp size={24} />
-            </Button>
-          </div>
-          {/* End button */}
-          {hasFooter && <Footer />}
         </div>
         <Toaster />
       </>
@@ -128,10 +69,7 @@ interface WrapperContentProps extends React.HTMLAttributes<HTMLDivElement> {}
 const WrapperContent = forwardRef<HTMLDivElement, WrapperContentProps>(
   ({ children, className }, ref) => {
     return (
-      <div
-        ref={ref}
-        className={cn('flex flex-col gap-10 px-content', className)}
-      >
+      <div ref={ref} className={cn('flex w-full flex-col gap-10', className)}>
         {children}
       </div>
     )

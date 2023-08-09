@@ -35,10 +35,16 @@ function Projects() {
         return (
           <div
             key={item.id || index}
-            className='flex h-full w-full flex-col gap-10 rounded-md bg-background p-5 shadow-md md:flex-row'
+            className='flex h-full w-full flex-col gap-10 rounded-md bg-background p-5 shadow-md lg:flex-row'
           >
             {/* Image preview/live */}
-            <div className='relative h-[450px] w-[450px] flex-shrink-0 bg-secondary'>
+            <div
+              className={cn(
+                'relative h-auto min-h-[200px] w-full min-w-[150px] flex-1 flex-shrink-0 bg-secondary',
+                'sm:min-h-[250px] sm:min-w-[250px]',
+                'md:min-h-[350px] md:min-w-[350px]'
+              )}
+            >
               <Image
                 fill
                 sizes='100%'
