@@ -16,12 +16,15 @@ const poppins = Poppins({
 function HeroBanner() {
   return (
     <div className={cn('h-full w-full md:my-6')}>
-      <div className='flex h-full w-full flex-col-reverse items-center justify-center gap-10 md:flex-row md:items-start'>
-        <div className='flex h-fit w-full flex-col justify-center md:h-full md:w-2/3'>
+      <div className='flex h-full w-full flex-col-reverse gap-10 md:flex-row'>
+        <div className='flex h-full w-full flex-col items-center justify-between md:w-2/3 md:items-start'>
           <div className='flex flex-col gap-5'>
             <h1
               className={cn(
-                'line-clamp-3 text-center text-[2.5rem] font-bold leading-tight sm:text-[3rem] md:text-left md:text-[4rem] lg:text-7xl',
+                'line-clamp-4 text-center text-[2.5rem] font-bold leading-tight',
+                'sm:text-[3.5rem]',
+                'md:text-left md:text-[4rem]',
+                'lg:text-7xl',
                 poppins.className
               )}
             >
@@ -32,7 +35,7 @@ function HeroBanner() {
               based in Belgrade, Serbia. 📍
             </p>
           </div>
-          <div className='flex w-full flex-row items-center justify-center gap-5 py-10 md:w-fit'>
+          <div className='flex h-full w-full flex-row items-center justify-center gap-5 py-10 md:w-fit'>
             <Link href={'#'}>
               <Linkedin className='social-icons' />
             </Link>
@@ -47,7 +50,13 @@ function HeroBanner() {
             </Link>
           </div>
         </div>
-        <div className='flex h-[350px] w-[350px] items-center justify-center'>
+        <div
+          className={cn(
+            'flex h-72 min-h-[200px] w-72 min-w-[200px] items-center justify-center',
+            'sm:h-[350px] sm:w-[350px]',
+            'md:h-[450px] md:w-[450px] md:flex-shrink-0'
+          )}
+        >
           <div className='relative h-full w-full'>
             <Image
               src={'/soyoong.jpg'}
