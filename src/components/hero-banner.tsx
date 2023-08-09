@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { Poppins } from 'next/font/google'
 import { cn } from '~/lib/utils'
 import Link from 'next/link'
-import { Facebook, Github, Instagram, Linkedin } from 'lucide-react'
+import contactList from '~/data/contact'
 
 const poppins = Poppins({
   weight: '700',
@@ -36,18 +36,24 @@ function HeroBanner() {
             </p>
           </div>
           <div className='flex h-full w-full flex-row items-center justify-center gap-5 py-10 md:w-fit'>
-            <Link href={'#'}>
-              <Linkedin className='social-icons' />
-            </Link>
-            <Link href={'#'}>
-              <Instagram className='social-icons' />
-            </Link>
-            <Link href={'#'}>
-              <Facebook className='social-icons' />
-            </Link>
-            <Link href={'#'}>
-              <Github className='social-icons' />
-            </Link>
+            {contactList.map((item, index) => {
+              return (
+                <Link
+                  key={item.id || index}
+                  href={item.url || ''}
+                  passHref
+                  target='_blank'
+                >
+                  <Image
+                    className='h-8 w-8 object-contain'
+                    width={100}
+                    height={100}
+                    src={item.imageURL}
+                    alt={item.title}
+                  />
+                </Link>
+              )
+            })}
           </div>
         </div>
         <div
