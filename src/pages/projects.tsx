@@ -59,17 +59,17 @@ function Projects() {
                 {/* Project name */}
                 <h1
                   className={cn(
-                    'text-2xl font-bold text-foreground',
+                    'w-full text-center text-2xl font-bold text-foreground lg:text-start',
                     poppins.className
                   )}
                 >
                   {item.title}
                 </h1>
                 {/* Technical type */}
-                <div className='flex flex-row items-center gap-2 rounded-md border bg-secondary p-2'>
+                <div className='flex w-full flex-row items-center justify-center lg:justify-start'>
                   <p
                     className={cn(
-                      'text-base font-bold text-foreground',
+                      'rounded-md border bg-secondary p-2 text-base font-bold text-foreground',
                       poppins.className
                     )}
                   >
@@ -77,24 +77,26 @@ function Projects() {
                   </p>
                 </div>
                 {/* Overview */}
-                <p
-                  className={cn(
-                    'line-clamp-5 text-muted-foreground',
-                    poppins.className
-                  )}
-                >
-                  {item.overview}
-                </p>
+                <div className='w-full py-5 pt-0'>
+                  <p
+                    className={cn(
+                      'line-clamp-none text-center text-muted-foreground lg:text-start',
+                      poppins.className
+                    )}
+                  >
+                    {item.overview}
+                  </p>
+                </div>
               </div>
-              <div className='flex flex-col gap-10'>
+              <div className='flex w-full flex-col items-center justify-center gap-10 lg:items-start'>
                 {/* Technical list */}
-                <ul className='flex flex-row flex-wrap gap-5'>
+                <ul className='flex w-full flex-row flex-wrap items-center justify-center gap-5 lg:justify-start'>
                   {technicalList(item.technologyUsageId).map(
                     (techItem, index) => {
                       return (
                         <li
                           key={techItem.id || index}
-                          className='flex items-center justify-center gap-2 rounded-sm bg-background p-2 shadow-md'
+                          className='flex items-center justify-center gap-2 rounded-md bg-background p-2 shadow-md'
                         >
                           <div className='relative h-6 w-6'>
                             <Image
