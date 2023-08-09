@@ -1,6 +1,6 @@
 import '~/styles/globals.css'
 import { Inter } from 'next/font/google'
-import { ReactNode } from 'react'
+import { ReactNode, Suspense } from 'react'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 const inter = Inter({
@@ -9,23 +9,14 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const { SITE_NAME } = process.env
-
-export const metadata = {
-  title: {
-    default: SITE_NAME,
-    template: `%s | ${SITE_NAME}`,
-  },
-  robots: {
-    follow: true,
-    index: true,
-  },
-}
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang='en' className={inter.className}>
-      <body>{children}</body>
+    <html lang='en' className={inter.variable}>
+      <body>
+        <Suspense>
+          <main>{children}</main>
+        </Suspense>
+      </body>
     </html>
   )
 }

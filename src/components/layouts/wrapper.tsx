@@ -1,13 +1,36 @@
-'use client'
-
 import React, { forwardRef, useEffect, useState } from 'react'
 import { ChevronUp } from 'lucide-react'
-import Head from 'next/head'
 import { Footer, Navbar } from '~/components/layouts'
 import { Button } from '~/components/ui/button'
 import { cn } from '~/lib/utils'
 import '~/styles/globals.css'
 import { Toaster } from '~/components/ui/toaster'
+import Head from 'next/head'
+
+const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env
+const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+  : 'http://localhost:3000'
+
+export const metadata = {
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: SITE_NAME!,
+    template: `%s | ${SITE_NAME}`,
+  },
+  robots: {
+    follow: true,
+    index: true,
+  },
+  ...(TWITTER_CREATOR &&
+    TWITTER_SITE && {
+      twitter: {
+        card: 'summary_large_image',
+        creator: TWITTER_CREATOR,
+        site: TWITTER_SITE,
+      },
+    }),
+}
 
 interface WrapperHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
@@ -39,13 +62,13 @@ const WrapperTitle = forwardRef<HTMLHeadingElement, WrapperTitleProps>(
 
 WrapperTitle.displayName = 'WrapperTitle'
 
-interface WrapperProps extends React.HTMLAttributes<HTMLElement> {
+interface WrapperProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
   hasNavbar?: boolean | undefined
   hasFooter?: boolean | undefined
 }
 
-const Wrapper = forwardRef<HTMLElement, WrapperProps>(
+const Wrapper = forwardRef<HTMLDivElement, WrapperProps>(
   ({ title, hasNavbar, hasFooter, children, className }, ref) => {
     const [isVisibleButtonScroll, setIsVisibleButtonScroll] = useState(false)
 
@@ -73,17 +96,11 @@ const Wrapper = forwardRef<HTMLElement, WrapperProps>(
     return (
       <>
         <Head>
-          <title>
-            {title ? `${title} | V5T Corporation` : 'V5T Corporation'}
-          </title>
-          <meta charSet='utf-8' />
-          <meta
-            name='viewport'
-            key='title'
-            content='initial-scale=1.0, width=device-width'
-          />
+          <title>{title ? title + ' - Amazona' : 'Amazona'}</title>
+          <meta name='description' content='Ecommerce Website' />
+          <link rel='icon' href='/favicon.ico' />
         </Head>
-        <main
+        <div
           ref={ref}
           className={cn(
             'flex flex-col justify-between scroll-smooth bg-background'
@@ -120,7 +137,7 @@ const Wrapper = forwardRef<HTMLElement, WrapperProps>(
           </div>
           {/* End button */}
           {hasFooter && <Footer />}
-        </main>
+        </div>
         <Toaster />
       </>
     )

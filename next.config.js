@@ -4,11 +4,19 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'datsolar.com',
+        hostname: 'drive.google.com',
       },
       {
         protocol: 'https',
-        hostname: 'cdn-icons-png.flaticon.com',
+        hostname: 'user-images.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'datsolar.com',
       },
     ],
   },
