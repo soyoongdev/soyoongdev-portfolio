@@ -28,11 +28,12 @@ function HeroBanner() {
                 poppins.className
               )}
             >
-              Front-End React Developer 👋🏼
+              Front-End and Mobile Developer 👋🏼
             </h1>
             <p className='line-clamp-3 text-center text-lg md:line-clamp-5 md:text-left'>
-              Hi, I'm Stefan Topalovic. A passionate Front-end React Developer
-              based in Belgrade, Serbia. 📍
+              Hi, I'm Hau Nguyen with nickname is SoyoongDev. A passionate
+              Front-end React and Mobile Developer based in Ho Chi Minh city,
+              Viet Nam. 📍
             </p>
           </div>
           <div className='flex h-full w-full flex-row items-center justify-center gap-5 py-10 md:w-fit'>
