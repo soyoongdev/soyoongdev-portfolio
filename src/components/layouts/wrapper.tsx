@@ -12,7 +12,7 @@ interface WrapperHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 const WrapperHeader = forwardRef<HTMLDivElement, WrapperHeaderProps>(
   ({ children, className }, ref) => {
     return (
-      <div ref={ref} className={cn('my-2 mb-10', className)}>
+      <div ref={ref} className={cn('my-2 mb-5', className)}>
         {children}
       </div>
     )

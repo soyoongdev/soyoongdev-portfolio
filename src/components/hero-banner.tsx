@@ -16,7 +16,7 @@ const poppins = Poppins({
 function HeroBanner() {
   return (
     <div className={cn('h-full w-full md:my-6')}>
-      <div className='flex h-full w-full flex-col-reverse gap-10 md:flex-row'>
+      <div className='flex h-full w-full flex-col-reverse items-center gap-10 md:flex-row'>
         <div className='flex h-full w-full flex-col items-center justify-between md:w-2/3 md:items-start'>
           <div className='flex flex-col gap-5'>
             <h1
@@ -59,8 +59,9 @@ function HeroBanner() {
         <div
           className={cn(
             'flex h-72 min-h-[200px] w-72 min-w-[200px] items-center justify-center',
-            'sm:h-[350px] sm:w-[350px]',
-            'md:h-[450px] md:w-[450px] md:flex-shrink-0'
+            'sm:h-[300px] sm:w-[300px]',
+            'md:h-[350px] md:w-[350px] md:flex-shrink-0',
+            'lg:h-[450px] lg:w-[450px]'
           )}
         >
           <div className='relative h-full w-full'>
