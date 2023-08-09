@@ -5,8 +5,8 @@ import {
   WrapperContent,
   WrapperHeader,
 } from '~/components/layouts/wrapper'
-import Projects from '~/pages/projects'
-import TechnicalActivities from '~/pages/technical-activities'
+import Projects from '~/components/projects'
+import TechnicalActivities from '~/components/technical-activities'
 
 const HeroBanner = lazy(() => import('~/components/hero-banner'))
 

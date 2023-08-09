@@ -66,7 +66,7 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(({ className }, ref) => {
               SoyoongDev
             </Link>
           </div>
-          <div className='absolute right-0'>
+          <div className='absolute right-0 hidden'>
             <Button
               variant='text'
               className='h-fit'
@@ -86,7 +86,7 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(({ className }, ref) => {
             }
           )}
         >
-          <div className='w-full flex-shrink-0 lg:w-fit'>
+          <div className='hidden w-full flex-shrink-0 lg:w-fit'>
             <ul className='flex w-full list-none flex-col items-start justify-center gap-1 md:w-fit md:flex-row'>
               {navRoutes.map((page, index) => {
                 return (
@@ -94,12 +94,9 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(({ className }, ref) => {
                     key={index}
                     className='inline-flex h-9 w-full cursor-pointer items-center justify-center whitespace-nowrap lg:w-fit'
                   >
-                    <Link
-                      className='w-full p-2 text-center text-base font-medium text-secondary-foreground hover:bg-secondary'
-                      href={page.path}
-                    >
+                    <p className='w-full p-2 text-center text-base font-medium text-secondary-foreground hover:bg-secondary'>
                       {page.name}
-                    </Link>
+                    </p>
                   </li>
                 )
               })}
