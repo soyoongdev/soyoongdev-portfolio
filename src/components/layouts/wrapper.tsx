@@ -1,3 +1,5 @@
+'use client'
+
 import React, { forwardRef, useEffect, useState } from 'react'
 import { ChevronUp } from 'lucide-react'
 import { Footer, Navbar } from '~/components/layouts'
@@ -6,31 +8,6 @@ import { cn } from '~/lib/utils'
 import '~/styles/globals.css'
 import { Toaster } from '~/components/ui/toaster'
 import Head from 'next/head'
-
-const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env
-const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-  : 'http://localhost:3000'
-
-export const metadata = {
-  metadataBase: new URL(baseUrl),
-  title: {
-    default: SITE_NAME!,
-    template: `%s | ${SITE_NAME}`,
-  },
-  robots: {
-    follow: true,
-    index: true,
-  },
-  ...(TWITTER_CREATOR &&
-    TWITTER_SITE && {
-      twitter: {
-        card: 'summary_large_image',
-        creator: TWITTER_CREATOR,
-        site: TWITTER_SITE,
-      },
-    }),
-}
 
 interface WrapperHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
