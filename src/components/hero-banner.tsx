@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { Poppins } from 'next/font/google'
 import { cn } from '~/lib/utils'
 import Link from 'next/link'
-import contactList from '~/data/contact'
+import { contactList } from '~/data/contact'
 
 const poppins = Poppins({
   weight: '700',
