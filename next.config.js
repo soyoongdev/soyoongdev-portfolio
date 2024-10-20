@@ -18,6 +18,18 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'datsolar.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'thietthach.vn',
+      },
+      {
+        protocol: 'https',
+        hostname: 'github-production-user-asset-6210df.s3.amazonaws.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'phungnguyengarment.vn',
+      },
     ],
   },
 }

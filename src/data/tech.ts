@@ -103,6 +103,18 @@ const techData: Tech[] = [
     imageURL: '/icons/figma.svg',
     url: 'https://www.figma.com',
   },
+  {
+    id: 17,
+    title: 'Photoshop',
+    imageURL: '/icons/photoshop-icon.svg',
+    url: 'https://www.adobe.com/vn_vi/products/photoshop.html',
+  },
+  {
+    id: 18,
+    title: 'Postman',
+    imageURL: '/icons/postman-icon.svg',
+    url: 'https://www.postman.com',
+  },
 ]
 
 export default techData

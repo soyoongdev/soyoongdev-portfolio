@@ -23,7 +23,7 @@ export default async function HomePage() {
     <Layout title='Home'>
       <Wrapper>
         <WrapperHeader>
-          <Suspense fallback={<h1>Loading</h1>}>
+          <Suspense fallback={<span>Loading</span>}>
             <HeroBanner />
           </Suspense>
         </WrapperHeader>

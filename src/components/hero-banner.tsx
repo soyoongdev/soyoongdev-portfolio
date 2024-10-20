@@ -28,12 +28,11 @@ function HeroBanner() {
                 poppins.className
               )}
             >
-              Front-End and Mobile Developer 👋🏼
+              FullStack Developer 👋🏼
             </h1>
             <p className='line-clamp-none text-center text-lg md:line-clamp-5 md:text-left'>
               Hi, I'm Hau Nguyen with nickname is SoyoongDev. A passionate
-              Front-end React and Mobile Developer based in Ho Chi Minh city,
-              Viet Nam. 📍
+              FullStack Developer based in Ho Chi Minh city, Viet Nam. 📍
             </p>
           </div>
           <div className='flex h-full w-full flex-row items-center justify-center gap-5 py-10 md:w-fit'>
