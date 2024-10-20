@@ -79,7 +79,7 @@ const projectData: Project[] = [
     techType: TechType.FullStack,
     openType: 'live_demo',
     overview:
-      'Initiated, developed, and managed projects from inception to the present. Experienced in project management, source code management with strict version control and standardized formatting. Continuously enhancing programming and project development skills, collaborating effectively within teams, and more.',
+      'Grasping requirements, coming up with ideas, planning, designing projects, drawing data structure diagrams, programming software, I did it all by myself to build this software.',
     technologyUsageId: [2, 4, 5, 6, 7, 8, 9, 10, 12, 16, 17, 18],
     imagePreviews: [
       'https://github.com/user-attachments/assets/0782a930-0ff4-4c94-9ba1-4d01bea3fdc7',
