@@ -79,7 +79,7 @@ const projectData: Project[] = [
     techType: TechType.FullStack,
     openType: 'live_demo',
     overview:
-      'Grasping requirements, coming up with ideas, planning, designing projects, drawing data structure diagrams, programming software, I did it all by myself to build this software.',
+      'Garment industry product code management software includes: Product code status information, product code accessories, imported fabric quantity, inventory, quantity being sewn, ironed, checked, packaged. In addition, it also warns if the product code is at risk of being late for export, searches, filters product codes easily and is easy to use.',
     technologyUsageId: [2, 4, 5, 6, 7, 8, 9, 10, 12, 16, 17, 18],
     imagePreviews: [
       'https://github.com/user-attachments/assets/0782a930-0ff4-4c94-9ba1-4d01bea3fdc7',
